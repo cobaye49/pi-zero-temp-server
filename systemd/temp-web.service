@@ -6,7 +6,7 @@ After=network.target
 User=pi
 WorkingDirectory=/home/pi
 Environment="PATH=/home/pi/env_temp/bin"
-ExecStart=/home/pi/env_temp/bin/python /home/pi/server_temp.py
+ExecStart=/home/pi/env_temp/bin/python /home/pi/pi-zero-server/server_temp.py
 Restart=always
 
 [Install]
