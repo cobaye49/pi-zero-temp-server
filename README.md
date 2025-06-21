@@ -30,7 +30,13 @@ python server_temp.py
 
 ## Autostart with systemd
 
-Copy `systemd/temp-web.service` to `/etc/systemd/system/` then :
+Copy `temp-web.service` to `/etc/systemd/system/` 
+
+```bash
+sudo mv /home/pi/temp-web.service /etc/systemd/system/temp.service
+```
+
+then :
 
 ```bash
 sudo systemctl daemon-reload
@@ -40,7 +46,7 @@ sudo systemctl start temp-web.service
 
 ## Result
 
-Check the result at : http://"PI_ZERO_IP":5000/
+Check the result at : `http://"PI_ZERO_IP":5000/` 
 
-The default user is "pi" and password is "password"
+The default user is ` pi`  and password is ` password` 
 
