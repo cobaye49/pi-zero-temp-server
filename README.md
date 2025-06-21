@@ -38,7 +38,7 @@ python server_temp.py
 Copy `temp-web.service` to `/etc/systemd/system/` 
 
 ```bash
-sudo mv /home/pi/temp-web.service /etc/systemd/system/temp.service
+sudo mv /home/pi/systemd/temp-web.service /etc/systemd/system/temp.service
 ```
 
 then :
