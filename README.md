@@ -1,7 +1,9 @@
 # Pi Zero Temperature Server
 
-![Screenshot](Screenshot.png)
 A minimal Flask server that reads data from a DHT22 sensor and displays it on a responsive web page with a dynamic Chart.js graph.
+
+![Screenshot](Screenshot.png)
+
 
 ## Features
 
