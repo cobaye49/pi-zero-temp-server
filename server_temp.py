@@ -6,8 +6,8 @@ from datetime import datetime
 app = Flask(__name__)
 DHT_SENSOR = Adafruit_DHT.DHT22
 DHT_PIN = 4
-USERNAME = "admin"
-PASSWORD = "monmotdepasse"
+USERNAME = "pi"
+PASSWORD = "password"
 
 def check_auth(username, password):
     return username == USERNAME and password == PASSWORD
@@ -26,13 +26,13 @@ def requires_auth(f):
     return decorated
 
 def log_data(temp, hum):
-    with open("/home/cobaye/dht22_history.csv", "a") as f:
+    with open("/home/pi/dht22_history.csv", "a") as f:
         writer = csv.writer(f)
         writer.writerow([datetime.now().isoformat(), temp, hum])
 
 def read_history(n=20):
     try:
-        with open("/home/cobaye/dht22_history.csv", "r") as f:
+        with open("/home/pi/dht22_history.csv", "r") as f:
             lines = f.readlines()[-n:]
             timestamps, temps = [], []
             for line in lines:
@@ -70,9 +70,9 @@ def index():
         </head>
         <body>
             <div class='card'>
-                <div class='title'>🌡️ Température Pi Zero</div>
-                <div class='value'>Température : {temperature:.1f} °C</div>
-                <div class='value'>Humidité : {humidity:.1f} %</div>
+                <div class='title'>🌡️Pi Zero Temperature</div>
+                <div class='value'>Temperature : {temperature:.1f} °C</div>
+                <div class='value'>Humidity : {humidity:.1f} %</div>
                 <div class='subtitle'>Dernier relevé : {now}</div>
             </div>
             <canvas id='historyChart' width='300' height='150'></canvas>
