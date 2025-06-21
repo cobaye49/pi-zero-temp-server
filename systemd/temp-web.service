@@ -3,10 +3,10 @@ Description=Serveur Flask température - Pi Zero
 After=network.target
 
 [Service]
-User=cobaye
-WorkingDirectory=/home/cobaye
-Environment="PATH=/home/cobaye/env_temp/bin"
-ExecStart=/home/cobaye/env_temp/bin/python /home/cobaye/server_temp.py
+User=pi
+WorkingDirectory=/home/pi
+Environment="PATH=/home/pi/env_temp/bin"
+ExecStart=/home/pi/env_temp/bin/python /home/pi/server_temp.py
 Restart=always
 
 [Install]
