@@ -55,3 +55,21 @@ Check the result at : `http://"PI_ZERO_IP":5000/`
 
 The default user is `pi`  and password is `password` 
 
+To modify them edit line 9 and 10 of the `server_temp.py` file
+
+```bash
+sudo systemctl stop temp-web.service
+```
+
+```bash
+sudo nano /home/pi/serveur_temp.py
+```
+
+```bash
+USERNAME = "your_user"
+PASSWORD = "your_password"
+```
+
+```bash
+sudo systemctl start temp-web.service
+```
