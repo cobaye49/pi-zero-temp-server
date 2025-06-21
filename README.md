@@ -17,6 +17,11 @@ A minimal Flask server that reads data from a DHT22 sensor and displays it on a 
 ## Installation
 
 ```bash
+git clone https://github.com/cobaye49/pi-zero-temp-server.git
+```
+
+```bash
+cd pi-zero-temp-server
 python3 -m venv env_temp
 source env_temp/bin/activate
 pip install -r requirements.txt
@@ -48,5 +53,5 @@ sudo systemctl start temp-web.service
 
 Check the result at : `http://"PI_ZERO_IP":5000/` 
 
-The default user is ` pi`  and password is ` password` 
+The default user is `pi`  and password is `password` 
 
