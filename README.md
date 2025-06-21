@@ -41,5 +41,6 @@ sudo systemctl start temp-web.service
 ## Result
 
 Check the result at : http://"PI_ZERO_IP":5000/
+
 The default user is "pi" and password is "password"
 
